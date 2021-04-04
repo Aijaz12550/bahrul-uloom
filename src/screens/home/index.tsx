@@ -1,7 +1,8 @@
 import { FC, memo } from "react";
 import { Footer, Header, Hero, CourseCard } from "../../components";
 import { Grid, Toolbar, Typography } from "@material-ui/core"
-import { styles } from "./style"
+import { styles } from "./style";
+import {nanoid} from "nanoid"
 
 const Home: FC<any> = () => {
 
@@ -22,7 +23,7 @@ const Home: FC<any> = () => {
                         ["Nazra", "Hifz", "Quran"].map((cours, index) => {
                             return (
                                 
-                                <CourseCard title={cours} />
+                                <CourseCard title={cours} key={nanoid()} />
                                 )
                             })
                         }
