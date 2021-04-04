@@ -1,12 +1,35 @@
 import { FC, memo } from "react";
-import { Header, Hero } from "../../components";
+import { Footer, Header, Hero, CourseCard } from "../../components";
+import { Grid, Toolbar, Typography } from "@material-ui/core"
+import { styles } from "./style"
 
+const Home: FC<any> = () => {
 
-const Home:FC<any> = () => {
-    return(
+    const classes = styles();
+    return (
         <div>
             <Header />
-            <Hero />
+            <Grid container style={{ minHeight: "calc( 100vh - 200px)" }}>
+                <Hero />
+                <Toolbar>
+                    <Typography variant="h4">
+                        Available Courses
+                    </Typography>
+                </Toolbar>
+                <Toolbar className={classes.cardContainer}>
+                   
+                    {
+                        ["Nazra", "Hifz", "Quran"].map((cours, index) => {
+                            return (
+                                
+                                <CourseCard title={cours} />
+                                )
+                            })
+                        }
+                       
+                </Toolbar>
+            </Grid>
+            <Footer />
         </div>
     )
 }

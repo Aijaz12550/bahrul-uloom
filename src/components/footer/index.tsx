@@ -1,10 +1,18 @@
-import { Fragment, FC } from "react"
-
+import { Grid, Typography } from "@material-ui/core"
+import { FC, memo } from "react"
+import { styles} from "./style"
 
 const Footer: FC<any> = () => {
-    return(
-        <Fragment>
 
-        </Fragment>
+    const classes = styles();
+    return(
+        <Grid container className={classes.container}>
+            <Typography variant="h5">
+                Footer
+            </Typography>
+
+        </Grid>
     )
 }
+
+export default memo(Footer);

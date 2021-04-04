@@ -10,4 +10,4 @@ const Hero: FC<any> = () => {
     )
 }
 
-export default Hero
+export default memo(Hero)
