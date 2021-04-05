@@ -10,6 +10,9 @@ const Footer: FC<any> = () => {
             <Typography variant="h5">
                 Footer
             </Typography>
+            <Typography variant="h5">
+                Footer
+            </Typography>
 
         </Grid>
     )
