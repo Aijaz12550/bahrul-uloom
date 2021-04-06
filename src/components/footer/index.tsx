@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core"
+import { Grid, Toolbar, Typography } from "@material-ui/core"
 import { FC, memo } from "react"
 import { styles} from "./style"
 
@@ -6,12 +6,13 @@ const Footer: FC<any> = () => {
 
     const classes = styles();
     return(
-        <Grid container className={classes.container}>
+        <Grid container justify="center" className={classes.container}>
             <Typography variant="h5">
-                Footer
+                Lead Teacher: Mr. Subhan Peer Zada
             </Typography>
+           <Toolbar/>
             <Typography variant="h5">
-                Footer
+            Contact : # 0306-2841362
             </Typography>
 
         </Grid>

@@ -1,24 +1,28 @@
-import { Button, Card, CardContent, CardHeader, CardMedia, Grid, Typography } from "@material-ui/core";
+import { Button, Card, CardContent, CardHeader, CardMedia, Grid, Typography, Grow } from "@material-ui/core";
 import { FC, memo } from "react";
-import img1 from "../../assets/hero.jpeg"
 import { styles } from "./style"
 
 type Props = {
-    title: string
+    title: string,
+    mediaImage:any
 }
 const CourseCard: FC<Props> = (props) => {
 
-    let { title } = props;
+    let { title, mediaImage } = props;
 
     const classes = styles();
     return (
-
+      <Grow
+          in={true}
+          style={{ transformOrigin: '0 0 0' }}
+          {...(true ? { timeout: 1000 } : {})}
+        >
         <Card className={classes.root}>
             <CardHeader
                 title={title}
             />
             <CardMedia
-                image={img1}
+                image={mediaImage}
                 title="Paella dish"
                 className={classes.media}
             />
@@ -35,6 +39,7 @@ const CourseCard: FC<Props> = (props) => {
             </Button>
             </Grid>
         </Card>
+        </Grow>
 
     )
 }

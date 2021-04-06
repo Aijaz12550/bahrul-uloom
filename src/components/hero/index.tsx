@@ -1,4 +1,4 @@
-import { Grid, Typography, Slide } from "@material-ui/core";
+import { Grid, Typography, Slide, } from "@material-ui/core";
 import { FC, memo } from "react";
 import heroImage from "../../assets/hero.jpg";
 import { styles } from "./style";
@@ -6,7 +6,7 @@ import { styles } from "./style";
 const Hero: FC<any> = () => {
     const classes = styles();
     return (
-        <Grid container className={classes.container} >
+        <Grid container justify="center" className={classes.container} >
             <Grid item md={6} sm={12} lg={6} className={classes.textContainer}>
                 <Slide direction="right" in={true} mountOnEnter unmountOnExit>
 
@@ -14,7 +14,7 @@ const Hero: FC<any> = () => {
                     The World's Online Quran Learning place.
                 </Typography>
                 </Slide>
-                <Typography variant="body2" component="p" >
+                <Typography variant="body2" component="p" className={classes.paragraph} >
                     The history of Islam concerns the political, social, economic and cultural developments of Islamic civilization.
                     Most historians[1] accept that Islam originated in Mecca and Medina at the start of the 7th century CE. Muslims
                     regard Islam as a return to the original faith of the prophets, such as Jesus, Solomon, David, Moses, Abraham,
@@ -22,14 +22,14 @@ const Hero: FC<any> = () => {
                 </Typography>
 
             </Grid>
-            <Grid item md={6} sm={12} lg={6} className={classes.imagesContainer} >
 
+            <Grid item md={6} sm={12} lg={6} className={classes.imagesContainer} >
                 <span className={classes.imageLeft}>
-                    <img className={classes.imgLeft} src={heroImage} alt="" height="250" width="250px" />
+                    <img className={classes.imgLeft} src={heroImage} alt="" height="270" width="280px" />
                 </span>
                 <span className={classes.imageRight}>
                     <Slide direction="left" in={true} mountOnEnter unmountOnExit>
-                        <img className={classes.imgRight} src={heroImage} alt="" height="250" width="250px" />
+                        <img className={classes.imgRight} src={heroImage} alt="" height="280" width="280px" />
                     </Slide>
                 </span>
 

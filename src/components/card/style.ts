@@ -8,6 +8,7 @@ export const styles = makeStyles((theme:any)=>({
       root:{
           maxWidth:"250px",
           minWidth:"250px",
-          margin: theme.spacing(3)
+          margin: theme.spacing(3),
+          boxShadow: "1px 1px 10px 1px #eee"
       }
 }))
