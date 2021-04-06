@@ -22,5 +22,8 @@ export const styles = makeStyles((theme:any) => ({
         "&:active":{
             transform:"translateY(1px)"
         }
+    },
+    logo:{
+        cursor:"pointer"
     }
 }))

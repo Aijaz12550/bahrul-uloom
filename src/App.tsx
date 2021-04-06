@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
-import { HomeScreen } from "./screens"
+import { HomeScreen, LoginScreen, SignupScreen } from "./screens"
 import { ThemeProvider } from '@material-ui/styles';
 import ChatIcon from '@material-ui/icons/Chat';
 import { theme } from './theme';
@@ -35,6 +35,8 @@ function App() {
 
      <Switch>
        <Route path="/home" component={HomeScreen}  />
+       <Route path="/login" component={LoginScreen}  />
+       <Route path="/signup" component={SignupScreen}  />
      </Switch>
      </ThemeProvider>
    </Router>

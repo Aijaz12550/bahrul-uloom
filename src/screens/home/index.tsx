@@ -6,12 +6,13 @@ import {nanoid} from "nanoid";
 import profileImage from "../../assets/profile.jpeg";
 import img1 from "../../assets/hero.jpeg"
 
+const headerRoutes = [{title:"Login", route:"/login"},{title:"Support",route:"/support"}]
 const Home: FC<any> = () => {
 
     const classes = styles();
     return (
         <div>
-            <Header />
+            <Header headerRoutes={headerRoutes} />
             <Grid container style={{ minHeight: "calc( 100vh - 200px)" }}>
                 <Hero />
                 <Toolbar/>
