@@ -33,7 +33,6 @@ const Header: FC<any> = (props) => {
                                     <Typography key={nanoid()} onClick={() => routeHandler(eachRoute.route)} className={classes.tab} variant="body2" component="span" >
                                         {eachRoute.title}
                                     </Typography>
-
                                 )
                             })
                         }
