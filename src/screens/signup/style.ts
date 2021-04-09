@@ -11,11 +11,12 @@ export const styles = makeStyles((theme:any)=>({
     form:{
         display:"flex",
         flexDirection:"column",
-        minHeight:220,
+        minHeight:350,
         justifyContent:"space-around",
         width:"100%",
         alignItems:"center",
         maxWidth:"350px",
+
     },
     input:{
         width:"100%",
