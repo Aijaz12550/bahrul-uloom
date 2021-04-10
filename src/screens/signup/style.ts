@@ -23,6 +23,10 @@ export const styles = makeStyles((theme:any)=>({
         marginBottom:"15px"
     },
     btn:{
-        alignSelf:"flex-end"
+        alignSelf:"flex-end",
+        marginLeft:"10px"
+    },
+    btnContainer:{
+        marginTop:"15px"
     }
 }))

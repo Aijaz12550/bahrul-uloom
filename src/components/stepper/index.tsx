@@ -2,29 +2,30 @@ import { Step, StepLabel, Stepper } from "@material-ui/core";
 import { FC, memo } from "react";
 import { nanoid } from "nanoid";
 
-export type StepType = {
-    label: string
-    activeStep: number
+
+type Props = {
+    stepperClickHandler: (a:any)=>void,
+    step: number,
+    isStep4: boolean
 }
 
+const StepperComponent: FC<Props> = (props) => {
 
-const StepperComponent: FC<{step:number}> = (props) => {
-
-    let {step} = props
+    let { step, isStep4, stepperClickHandler } = props
     return (
         <Stepper activeStep={step} alternativeLabel style={{ width: "100%", maxWidth: "450px" }} >
-            <Step key={nanoid()}>
+            <Step key={nanoid()} onClick={()=>stepperClickHandler(0)}>
                 <StepLabel>Type</StepLabel>
             </Step>
-            <Step key={nanoid()}>
+            <Step key={nanoid()} onClick={()=>stepperClickHandler(0+1)}>
                 <StepLabel>Personal Info</StepLabel>
             </Step>
-            <Step key={nanoid()}>
+            <Step key={nanoid()} onClick={()=>stepperClickHandler(0+2)}>
                 <StepLabel>Education</StepLabel>
             </Step>
-            <Step key={nanoid()}>
+            { isStep4 && <Step key={nanoid()} onClick={()=>stepperClickHandler(0+3)}>
                 <StepLabel>Upload CV</StepLabel>
-            </Step>
+            </Step>}
         </Stepper>
 
     )

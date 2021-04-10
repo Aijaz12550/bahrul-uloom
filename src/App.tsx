@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { HomeScreen, LoginScreen, SignupScreen } from "./screens"
 import { ThemeProvider } from '@material-ui/styles';
 import ChatIcon from '@material-ui/icons/Chat';
@@ -27,16 +27,15 @@ function App() {
   return (
    <Router>
      <ThemeProvider theme={theme}>
-     <Redirect from="/" to="/home" />
 
      <Grid className={classes.chatIcon}>
      <ChatIcon style={{ fontSize: 35,color:"#fff" }} />
      </Grid>
 
      <Switch>
-       <Route path="/home" component={HomeScreen}  />
-       <Route path="/login" component={LoginScreen}  />
-       <Route path="/signup" component={SignupScreen}  />
+       <Route exact path="/" component={HomeScreen}  />
+       <Route exact path="/login" component={LoginScreen}  />
+       <Route exact path="/signup" component={SignupScreen}  />
      </Switch>
      </ThemeProvider>
    </Router>
