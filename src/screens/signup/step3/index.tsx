@@ -3,11 +3,12 @@ import { FC, memo } from "react";
 import { styles } from "./style";
 
 const Step3: FC<any> = (props) => {
-  let { values, changeHandler, validationError } = props;
+  let { values, changeHandler, validationErrors } = props;
 
   // hooks
   const classes = styles();
 
+  console.log("validationErrors",validationErrors)
   return (
     <Grid container justify="center">
       <TextField
@@ -17,8 +18,8 @@ const Step3: FC<any> = (props) => {
         name="degree"
         variant="outlined"
         label="Last Degree Name"
-        error={Boolean(validationError.degree)}
-        helperText={validationError.degree}
+        error={Boolean(validationErrors.degree)}
+        helperText={validationErrors?.degree}
       />
       <TextField
         className={classes.input}
@@ -28,6 +29,8 @@ const Step3: FC<any> = (props) => {
         variant="outlined"
         label="Start Year"
         type="month"
+        error={Boolean(validationErrors.startYear)}
+        helperText={validationErrors.startYear}
         InputLabelProps={{
             shrink: true,
           }}
@@ -40,6 +43,8 @@ const Step3: FC<any> = (props) => {
         variant="outlined"
         label="End Year"
         type="month"
+        error={Boolean(validationErrors.endYear)}
+        helperText={validationErrors.endYear}
         required
         InputLabelProps={{
           shrink: true,

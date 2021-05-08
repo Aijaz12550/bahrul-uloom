@@ -4,7 +4,7 @@ import { Header } from "../../components";
 import { styles } from "./style";
 import { useHistory } from "react-router-dom";
 
-const headerRoutes = [{title:"Home", route:"/home"},{title:"Support", route:".support"}]
+const headerRoutes = [{title:"Home", route:"/"},{title:"Support", route:".support"}]
 const Login: FC<any> = () => {
 
     const classes = styles();

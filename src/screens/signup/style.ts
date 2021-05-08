@@ -24,9 +24,14 @@ export const styles = makeStyles((theme:any)=>({
     },
     btn:{
         alignSelf:"flex-end",
-        marginLeft:"10px"
+        marginLeft:"10px",
     },
     btnContainer:{
         marginTop:"15px"
-    }
+    },
+    errorText:{
+        color: "#ef5359",
+        fontSize: "13px"
+    },
+    
 }))

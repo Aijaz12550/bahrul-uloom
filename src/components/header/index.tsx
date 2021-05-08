@@ -22,7 +22,7 @@ const Header: FC<any> = (props) => {
         <Fragment>
             <AppBar position="static" >
                 <Toolbar>
-                    <Typography variant="h6" className={classes.logo} onClick={()=>routeHandler("/home")}>
+                    <Typography variant="h6" className={classes.logo} onClick={()=>routeHandler("/")}>
                         Bahrul uloom
                     </Typography>
 
