@@ -22,6 +22,9 @@
 # config
 src/config/firebase.ts
 
+# build
+deploy
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
