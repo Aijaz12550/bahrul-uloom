@@ -4,7 +4,17 @@ import { styles } from "./style";
 import { useHistory } from "react-router-dom";
 import { nanoid } from "nanoid";
 
-const Header: FC<any> = (props) => {
+
+type HeaderRoutes  = {
+    title: string
+    route: string
+}
+type Props = {
+    headerRoutes: HeaderRoutes[]
+    title?: string
+}
+
+const Header: FC<Props> = (props) => {
     const { headerRoutes } = props;
 
     // hooks
@@ -13,7 +23,7 @@ const Header: FC<any> = (props) => {
 
 
     // handlers
-    const routeHandler = (route: string) => {
+    const routeHandler = (route: string,) => {
         history.push(route)
     }
 
@@ -42,6 +52,10 @@ const Header: FC<any> = (props) => {
 
         </Fragment>
     )
+}
+
+Header.defaultProps = {
+    title: "Bahr Ul Uloom"
 }
 
 export default memo(Header);

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { AdminRoutes, HomeScreen, LoginScreen, SignupScreen } from "./screens"
+import { AdminRoutes, HomeScreen, LoginScreen, SignupScreen, StudentDashBoard } from "./screens"
 import { ThemeProvider } from '@material-ui/styles';
 import ChatIcon from '@material-ui/icons/Chat';
 import { theme } from './theme';
@@ -38,6 +38,7 @@ function App() {
        <Route exact path="/" component={HomeScreen}  />
        <Route exact path="/login" component={LoginScreen}  />
        <Route exact path="/signup" component={SignupScreen}  />
+       <Route path="/dashboard/student" component={StudentDashBoard} />
        <Route exact path="/admin" component={AdminRoutes} />
      </Switch>
      </ThemeProvider>

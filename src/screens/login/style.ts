@@ -20,5 +20,12 @@ export const styles = makeStyles((theme:any)=>({
     input:{
         width:"100%",
         maxWidth:"350px",
+    },
+    error:{
+        fontSize:"14px",
+        color: "#ef5359",
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        maxWidth:"350px",
     }
 }))
