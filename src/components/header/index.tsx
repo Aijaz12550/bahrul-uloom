@@ -1,8 +1,9 @@
 import { FC, memo, Fragment } from "react"
-import { AppBar, Grid, Toolbar, Typography } from "@material-ui/core"
+import { AppBar, Avatar, Grid, Toolbar, Typography } from "@material-ui/core"
 import { styles } from "./style";
 import { useHistory } from "react-router-dom";
 import { nanoid } from "nanoid";
+import dummyProfilePic from "../../assets/dummyProfilePic.jpeg";
 
 
 type HeaderRoutes  = {
@@ -47,6 +48,7 @@ const Header: FC<Props> = (props) => {
                             })
                         }
                     </Grid>
+                        <Avatar alt="Aijaz Abbasi" src={dummyProfilePic} />
                 </Toolbar>
             </AppBar>
 
