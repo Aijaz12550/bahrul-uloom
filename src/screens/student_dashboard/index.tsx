@@ -11,7 +11,14 @@ let courses = [
     { title: "Tafseer e Quran", img: "", paragraph: "" }
 ]
 
-const headerRoutes = [{ title: "My Courses", route: "/dashboard/student/mycourses" }, { title: "Available Courses", route: "/dashboard/student/availablecourses" }, { title: "Annousements", route: "/dashboard/student/annousements" }];
+const headerRoutes = [
+    { title: "My Profile", route: "/dashboard/student/mycourses" },
+    { title: "My Courses", route: "/dashboard/student/mycourses" }, 
+    { title: "Available Courses", route: "/dashboard/student/availablecourses" }, 
+    { title: "Annousements", route: "/dashboard/student/annousements" }, 
+    { title: "Billing", route: "/dashboard/student/annousements" },
+    { title: "Sign Out", route: "/dashboard/student/annousements" }
+];
 const StudentDashboard: FC<any> = () => {
     return (
         <Grid container >
